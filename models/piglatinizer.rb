@@ -32,7 +32,7 @@ class PigLatinizer
     @word = word
     if vowel(@word[0])
       "#{@word}way"
-    elsif !vowel(@word[0]) && !vowel(@word[1]) && !vowel(word[2])
+    elsif !vowel(@word[0]) && !vowel(@word[1]) && !vowel(@word[2])
       "#{@word}#{ending(text)}ay"
     elsif !vowel(@word[0]) && !vowel(@word[1])
       "#{@word}#{middle(text)}ay"
