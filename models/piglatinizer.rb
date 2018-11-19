@@ -28,16 +28,16 @@ class PigLatinizer
     letter.match(/[aeiouAEIOU]/)
   end
 
-  def piglatinize_word(text)
-    @text = text
-    if vowel(@text[0])
-      "#{@text}way"
-    elsif !vowel(@text[0]) && !vowel(@text[1]) && !vowel(@text[2])
-      "#{@text}#{ending(text)}ay"
-    elsif !vowel(@text[0]) && !vowel(@text[1])
-      "#{@text}#{middle(text)}ay"
-    elsif !vowel(@text[0])
-      "#{@text}#{first_letter(text)}ay"
+  def piglatinize_word(word)
+    @word = word
+    if vowel(@word[0])
+      "#{@word}way"
+    elsif !vowel(@word[0]) && !vowel(@word[1]) && !vowel(@word[2])
+      "#{@word}#{ending(word)}ay"
+    elsif !vowel(@word[0]) && !vowel(@word[1])
+      "#{@word}#{middle(word)}ay"
+    elsif !vowel(@word[0])
+      "#{@word}#{first_letter(word)}ay"
     end
   end
 
