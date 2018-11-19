@@ -12,8 +12,7 @@ class PigLatinizer
     word.slice!(0..1)
   end
 
-  def third_letter(word)
-    binding.pry
+  def ending(word)
     word.slice!(0..2)
   end
 
@@ -34,7 +33,7 @@ class PigLatinizer
     if vowel(@text[0])
       "#{@text}way"
     elsif !vowel(@text[0]) && !vowel(@text[1]) && !vowel(@text[2])
-      "#{@text}#{third_letter(text)}ay"
+      "#{@text}#{ending(text)}ay"
     elsif !vowel(@text[0]) && !vowel(@text[1])
       "#{@text}#{middle(text)}ay"
     elsif !vowel(@text[0])
