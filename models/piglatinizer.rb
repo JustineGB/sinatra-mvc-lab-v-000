@@ -8,7 +8,7 @@ class PigLatinizer
     word.slice!(0)
   end
 
-  def second_letter(word)
+  def middle(word)
     word.slice!(0..1)
   end
 
@@ -36,7 +36,7 @@ class PigLatinizer
     elsif !vowel(@text[0]) && !vowel(@text[1]) && !vowel(@text[2])
       "#{@text}#{third_letter(text)}ay"
     elsif !vowel(@text[0]) && !vowel(@text[1])
-      "#{@text}#{second_letter(text)}ay"
+      "#{@text}#{middle(text)}ay"
     elsif !vowel(@text[0])
       "#{@text}#{first_letter(text)}ay"
     end
@@ -45,7 +45,6 @@ class PigLatinizer
   def piglatinize_words(text)
     @text = text.split(" ")
     @text.collect do |word|
-      #binding.pry
       piglatinize_word(word)
     end.join(" ")
   end
