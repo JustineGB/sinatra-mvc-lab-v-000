@@ -13,6 +13,7 @@ class PigLatinizer
   end
 
   def third_letter(word)
+    binding.pry
     word.slice!(0..2)
   end
 
@@ -45,7 +46,6 @@ class PigLatinizer
     @text = text.split(" ")
     @text.collect do |word|
       #binding.pry
-
       piglatinize_word(word)
     end.join(" ")
   end
