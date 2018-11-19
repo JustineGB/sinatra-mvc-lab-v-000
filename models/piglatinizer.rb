@@ -44,7 +44,7 @@ class PigLatinizer
   def piglatinize_words(text)
     @text = text.split(" ")
     @text.collect do |word|
-      binding.pry
+      #binding.pry
 
       piglatinize_word(word)
     end.join(" ")
